@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <script>
+            function myFunction() {
+              var input, filter, ul, li, a, i;
+              input = document.getElementById("mySearch");
+              filter = input.value.toUpperCase();
+              ul = document.getElementById("myMenu");
+              li = ul.getElementsByTagName("li");
+              for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                } else {
+                  li[i].style.display = "none";
+                }
+              }
+            }
+        </script>
+        <style>
+            #container {
+                text-align: center;
+                margin-top: 50px;
+            }
+            .circular-image {
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                overflow: hidden;
+                display: inline-block;
+                margin: 10px;
+            }
+            .circular-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            #heading {
+                font-size: 48px;
+                font-weight: bold;
+                color: #FF5733;
+               /* position: absolute; */
+                text-align: center;
+            }
+            body {
+                font-family: Arial, sans-serif;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            .row {
+                display: flex;
+            }
+            .left {
+                flex: 20%;
+                padding: 15px 0;
+                border-radius: 20px;
+            }
+            .left h2 {
+                padding-left: 8px;
+            }
+            .right {
+                flex: 80%;
+                padding: 15px;
+                border-radius: 20px;
+            }
+            #mySearch {
+                width: 100%;
+                font-size: 18px;
+                padding: 11px;
+                border: 1px solid #ddd;
+            }
+            #myMenu {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            #myMenu li a {
+                padding: 12px;
+                text-decoration: none;
+                color: black;
+                display: block
+            }
+
+            #myMenu li a:hover {
+                background-color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">TastyEats</h1>
+        <hr>
+        <br>
+
+        <div class="row">
+            <div class="left" style="background-color:#fbb4b4;">
+              <h2>Recipes</h2>
+              <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a name"> 
+              <ul id="myMenu">
+                <li><a href="sevTamatarRecipe.html">Sev Tamatar Sabji</a></li>
+                <li><a href="matarPaneerRecipe.html">Matar Paneer Sabji</a></li>
+                <li><a href="vegJaipuriRecipe.html">Veg Jaipuri Sabji</a></li>
+                <li><a href="sahiPaneerRecipe.html">Sahi Paneer Sabji</a></li>
+                <li><a href="choleMasalaRecipe.html">Chole Masala Sabji</a></li>
+                <li><a href="vegBiryaniRecipe.html">Veg Biryani</a></li>
+                <li><a href="dalTakdaRecipe.html">Dal Tadka</a></li>
+                <li><a href="rotiRecipe.html">Roti</a></li>
+                <li><a href="naanRecipe.html">Naan</a></li>
+                <li><a href="theplaRecipe.html">Thepla</a></li>
+                <li><a href="parathaRecipe.html">Paratha</a></li>
+                <li><a href="rabdiRecipe.html">Rabdi</a></li>
+                <li><a href="raasgulaRecipe.html">Raas Gula</a></li>
+                <li><a href="julabJammunRecipe.html">Julab Jammun</a></li>
+                <li><a href="lassiRecipe.html">Lassi</a></li>
+                <li><a href="cookieRecipe.html">Cookie</a></li>
+                <li><a href="brownieRecipe.html">Brownie</a></li>
+                <li><a href="cakeRecipe.html">Cake</a></li>
+                <li><a href="cupcakeRecipe.html">Cupcake</a></li>
+                <li><a href="puddingRecipe.html">Pudding</a></li>
+              </ul>
+            </div>
+            
+            <div class="right" style="background-color:#ffd0d0;">
+                <div id="container">
+                    <a href="brownieRecipe.html" class="circular-image">
+                        <img src="brownie.jpg" title="Brownie">
+                    </a>
+                    <h3>Brownie</h3>
+                </div>
+                <br>
+                <p style="padding-left: 50px; padding-right: 50px;">
+                    <h4 style="padding-left: 50px;">Ingredients:</h4>
+    <ul style="padding-left: 80px;">
+        <li>1 cup (2 sticks) unsalted butter</li>
+        <li>2 cups granulated sugar</li>
+        <li>4 large eggs</li>
+        <li>1 teaspoon vanilla extract</li>
+        <li>3/4 cup unsweetened cocoa powder</li>
+        <li>1 cup all-purpose flour</li>
+        <li>1/2 teaspoon salt</li>
+        <li>1/2 teaspoon baking powder</li>
+        <li>1 cup semisweet chocolate chips (optional)</li>
+        <li>1 cup chopped nuts (optional)</li>
+    </ul>
+    
+    <h4 style="padding-left: 50px;">Instructions:</h4>
+    <ol style="padding-left: 80px;">
+        <li>Preheat your oven to 350°F (175°C). Grease a 9x13 inch baking pan.</li>
+        <li>In a medium saucepan, melt the butter over low heat.</li>
+        <li>Remove the melted butter from heat and stir in the sugar, eggs, and vanilla extract until well combined.</li>
+        <li>In a separate bowl, sift together the cocoa powder, flour, salt, and baking powder.</li>
+        <li>Gradually add the dry ingredients to the wet ingredients, stirring until just combined.</li>
+        <li>If desired, fold in the chocolate chips and chopped nuts.</li>
+        <li>Pour the batter into the prepared baking pan and spread it out evenly.</li>
+        <li>Bake in the preheated oven for 25 to 30 minutes, or until a toothpick inserted into the center comes out with a few moist crumbs.</li>
+        <li>Allow the brownies to cool completely in the pan on a wire rack before cutting into squares and serving.</li>
+        <li>Enjoy your delicious homemade brownies!</li>
+    </ol>
+                </p>
+            </div>
+        </div>
+    </body>
+
+</html>

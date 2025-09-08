@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>
+            Sign Up Page
+        </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+          .boxes{
+            border-radius: 50px;
+            background: #fbb4b4;
+            box-shadow:  25px 25px 50px #969696, -25px -25px 50px #f9d9d9;
+            width: 60%;
+            padding: 10px;
+            margin: auto;
+          }
+          .align{
+            text-align: center;
+          }
+          #heading {
+                font-size: 48px;
+                font-weight: bold;
+                color: #FF5733;
+               /* position: absolute; */
+                text-align: center;
+            }
+        </style>
+        <script>
+          function validateForm() {
+              var mobileNumber = document.getElementById("mobile").value;
+              var email = document.getElementById("email").value;
+              var password = document.getElementById("psw").value;
+              var confirmPassword = document.getElementById("cpsw").value;
+              var birthdate=document.getElementById("bd").value;
+          
+              var mobileRegex = /^\d{10}$/;
+              var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+              var today = new Date();
+              var dd = String(today.getDate()).padStart(2, '0');
+              var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0
+              var yyyy = today.getFullYear();
+              today = yyyy + '-' + mm + '-' + dd;
+          
+              if (!mobileRegex.test(mobileNumber)) {
+                  alert("Please enter a valid 10 digit mobile number.");
+                  return false;
+              }
+          
+              if (!emailRegex.test(email)) {
+                  alert("Please enter a valid email address.");
+                  return false;
+              }
+
+              if(birthdate > today) {
+                  alert("Please enter a valid birth date.");
+                  return false;
+              }
+          
+              if (password !== confirmPassword) {
+                  alert("Passwords do not match.");
+                  return false;
+              }
+          
+              // All validations passed
+              return true;
+          }
+          </script>
+    </head>
+    
+    <body>
+        <h1 id="heading">TastyEats</h1>
+        <hr>
+        <h2 class="align">Sign Up</h2><br>
+        <div class="boxes align">
+          <form onsubmit="return validateForm()" method="POST" action="displayPage.html">
+              <label for="uname"><b>Name</b></label><br>
+              <input type="text" id="uname" name="uname" placeholder="Enter name" required>
+              <br><br>
+
+              <label for="mobile"><b>Mobile Number</b></label><br>
+              <input type="text" id="mobile" name="mobile" required>
+              <br><br>
+
+              <label for="email"><b>Email</b></label><br>
+              <input type="text" id="email" name="email" placeholder="Enter Email" required>
+              <br><br>
+
+              <label for="bd"><b>Birth Date</b></label><br>
+              <input type="date" id="bd" name="bd" required>
+              <br><br>
+
+              <label for="psw"><b>Password</b></label><br>
+              <input type="password" id="psw" placeholder="Enter Password" minlength="7" name="psw" required>
+              <br><br>
+          
+              <label for="cpsw"><b>Confirm Password</b></label><br>
+              <input type="password" id="cpsw" name="cpsw" placeholder="Confirm Password" required>
+              <br><br>
+
+              <button type="reset" value="reset">Reset</button>
+              <button type="submit" value="submit">Sign Up</button>
+          </form>
+        </div>
+    </body>
+</html>

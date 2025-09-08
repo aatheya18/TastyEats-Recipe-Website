@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <script>
+            function myFunction() {
+              var input, filter, ul, li, a, i;
+              input = document.getElementById("mySearch");
+              filter = input.value.toUpperCase();
+              ul = document.getElementById("myMenu");
+              li = ul.getElementsByTagName("li");
+              for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                } else {
+                  li[i].style.display = "none";
+                }
+              }
+            }
+        </script>
+        <style>
+            #container {
+                text-align: center;
+                margin-top: 50px;
+            }
+            .circular-image {
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                overflow: hidden;
+                display: inline-block;
+                margin: 10px;
+            }
+            .circular-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            #heading {
+                font-size: 48px;
+                font-weight: bold;
+                color: #FF5733;
+               /* position: absolute; */
+                text-align: center;
+            }
+            body {
+                font-family: Arial, sans-serif;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            .row {
+                display: flex;
+            }
+            .left {
+                flex: 20%;
+                padding: 15px 0;
+                border-radius: 20px;
+            }
+            .left h2 {
+                padding-left: 8px;
+            }
+            .right {
+                flex: 80%;
+                padding: 15px;
+                border-radius: 20px;
+            }
+            #mySearch {
+                width: 100%;
+                font-size: 18px;
+                padding: 11px;
+                border: 1px solid #ddd;
+            }
+            #myMenu {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            #myMenu li a {
+                padding: 12px;
+                text-decoration: none;
+                color: black;
+                display: block
+            }
+
+            #myMenu li a:hover {
+                background-color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">TastyEats</h1>
+        <hr>
+        <br>
+
+        <div class="row">
+            <div class="left" style="background-color:#fbb4b4;">
+              <h2>Recipes</h2>
+              <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a name"> 
+              <ul id="myMenu">
+                <li><a href="sevTamatarRecipe.html">Sev Tamatar Sabji</a></li>
+                <li><a href="matarPaneerRecipe.html">Matar Paneer Sabji</a></li>
+                <li><a href="vegJaipuriRecipe.html">Veg Jaipuri Sabji</a></li>
+                <li><a href="sahiPaneerRecipe.html">Sahi Paneer Sabji</a></li>
+                <li><a href="choleMasalaRecipe.html">Chole Masala Sabji</a></li>
+                <li><a href="vegBiryaniRecipe.html">Veg Biryani</a></li>
+                <li><a href="dalTakdaRecipe.html">Dal Tadka</a></li>
+                <li><a href="rotiRecipe.html">Roti</a></li>
+                <li><a href="naanRecipe.html">Naan</a></li>
+                <li><a href="theplaRecipe.html">Thepla</a></li>
+                <li><a href="parathaRecipe.html">Paratha</a></li>
+                <li><a href="rabdiRecipe.html">Rabdi</a></li>
+                <li><a href="raasgulaRecipe.html">Raas Gula</a></li>
+                <li><a href="julabJammunRecipe.html">Julab Jammun</a></li>
+                <li><a href="lassiRecipe.html">Lassi</a></li>
+                <li><a href="cookieRecipe.html">Cookie</a></li>
+                <li><a href="brownieRecipe.html">Brownie</a></li>
+                <li><a href="cakeRecipe.html">Cake</a></li>
+                <li><a href="cupcakeRecipe.html">Cupcake</a></li>
+                <li><a href="puddingRecipe.html">Pudding</a></li>
+              </ul>
+            </div>
+            
+            <div class="right" style="background-color:#ffd0d0;">
+                <div id="container">
+                    <a href="rotiRecipe.html" class="circular-image">
+                        <img src="roti.jpg" title="Roti">
+                    </a>
+                    <h3>Roti</h3>
+                </div>
+                <br>
+                <p style="padding-left: 50px; padding-right: 50px;">
+                    <h4 style="padding-left: 50px;">Ingredients:</h4>
+    <ul style="padding-left: 80px;">
+        <li>2 cups whole wheat flour (atta)</li>
+        <li>Water, as needed</li>
+        <li>Salt, a pinch (optional)</li>
+        <li>Ghee or oil, for cooking (optional)</li>
+    </ul>
+    
+    <h4 style="padding-left: 50px;">Instructions:</h4>
+    <ol style="padding-left: 80px;">
+        <li>In a mixing bowl, add whole wheat flour and salt (if using). Mix well.</li>
+        <li>Gradually add water to the flour, kneading as you go, until a soft, pliable dough forms. The dough should be smooth and not too sticky.</li>
+        <li>Once the dough is formed, cover it with a damp cloth and let it rest for about 15-20 minutes.</li>
+        <li>Divide the dough into small lemon-sized balls.</li>
+        <li>Take one dough ball and flatten it slightly with your hands.</li>
+        <li>Dust the flattened dough ball with some dry flour and roll it out into a thin, round disc using a rolling pin.</li>
+        <li>Heat a tawa or griddle over medium-high heat.</li>
+        <li>Place the rolled out roti onto the hot tawa and cook for about 30 seconds to 1 minute, or until bubbles start to appear on the surface.</li>
+        <li>Flip the roti and cook on the other side for another 30 seconds to 1 minute, or until light brown spots start to appear.</li>
+        <li>If desired, you can brush the cooked side of the roti with ghee or oil for added flavor.</li>
+        <li>Remove the roti from the tawa and place it on a plate. Cover with a clean kitchen towel to keep warm.</li>
+        <li>Repeat the process with the remaining dough balls, rolling out and cooking each roti.</li>
+        <li>Serve the hot rotis with your favorite curry, dal, or any side dish of your choice.</li>
+    </ol>
+                </p>
+            </div>
+        </div>
+    </body>
+
+</html>

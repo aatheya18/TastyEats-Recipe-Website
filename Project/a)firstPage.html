@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('homeBG.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .glass-box {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            width: 400px;
+            position: relative;
+        }
+
+        .title-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        #heading {
+            font-size: 56px;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        #animatedText {
+            font-size: 56px;
+            font-weight: bold;
+            color: #FF5733;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: 0;
+            animation: fadeInAndOut 4s infinite;
+            z-index: 2;
+        }
+
+        @keyframes fadeInAndOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .button {
+            background-color: #fbb4b4;
+            border: none;
+            padding: 10px 25px;
+            text-align: center;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        .button1:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 
+                        0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+</head>
+<body>
+    <div class="glass-box">
+        <div class="title-wrapper">
+            <h1 id="heading">TastyEats</h1>
+            <div id="animatedText">TastyEats</div>
+        </div>
+        <h4>Explore all your favourite recipes</h4><br><br>
+        <input type="button" class="button button1" 
+            name="SignUp" value="SignUp"
+            onclick="location.href='signUpPage.html';">
+        <input type="button" class="button button1" 
+            name="login" value="Login"
+            onclick="location.href='loginPage.html';">
+    </div>
+</body>
+</html>
